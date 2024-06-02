@@ -4,26 +4,34 @@ This is a simple VHDL code for controlling automatic doors. This code assumes a 
 
 Explanation of the code:
 
--- Entity Declaration: Defines the inputs and outputs of the module. Here, the input is the motion sensor signal, and the output is the control signal for the door.
+- Entity Declaration: Defines the inputs and outputs of the module. Here, the input is the motion sensor signal, and the output is the control signal for the door.
 
--- Architecture: Describes the behavior of the module.
+  ![entity_declaration](https://github.com/ProfUgur/VHDL-Automatic-Door/assets/148859613/392b06c0-f404-4cd2-ad1d-128153c0f501)
 
--- Constants: Defines a constant OPEN_DELAY which represents the delay before the door automatically closes.
+- Architecture: Describes the behavior of the module.
 
--- Signals:
+  Constants: Defines a constant OPEN_DELAY which represents the delay before the door automatically closes.
+
+  Signals:
 
 door_open: A boolean signal to keep track of whether the door is open or closed.
 timer: A time-based signal to count the delay before closing the door.
 
--- Control Process:
+![architecture](https://github.com/ProfUgur/VHDL-Automatic-Door/assets/148859613/0caae7a5-0051-4a4c-9abd-f8425e311f57)
+
+- Control Process:
 
 Monitors the Sensor input.
 If motion is detected (Sensor = '1'), the door opens (door_open is set to true), and the timer is reset
 If the door is open and no motion is detected, the timer counts up until it reaches the OPEN_DELAY, at which point the door is closed (door_open is set to false).
 
--- Output Assignment:
+![control_process](https://github.com/ProfUgur/VHDL-Automatic-Door/assets/148859613/23deeb85-aae9-469d-8583-ae193dc9f19c)
+
+- Output Assignment:
 
 Sets DoorCtrl to '1' when the door is open (door_open = true), indicating that the door should be open, and '0' otherwise, indicating that the door should be closed.
+
+![output_assignment](https://github.com/ProfUgur/VHDL-Automatic-Door/assets/148859613/3d9a0949-b858-4a7e-a9e5-a83f7a3e8258)
 
 A few site suggestions to understand or find information about the VHDL
 
