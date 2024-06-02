@@ -14,7 +14,7 @@ Explanation of the code:
 
   Signals:
 
-door_open: A boolean signal to keep track of whether the door is open or closed.
+door_open: A boolean signal to keep track of whether the door is open or closed. <br>
 timer: A time-based signal to count the delay before closing the door.
 
 ![architecture](https://github.com/ProfUgur/VHDL-Automatic-Door/assets/148859613/0caae7a5-0051-4a4c-9abd-f8425e311f57)
